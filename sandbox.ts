@@ -1,11 +1,5 @@
-const character = 'Nobo';
+//tsc sandbox.ts -w to continually compile on saving
 
-console.log(character);
 
-const inputs = document.querySelectorAll('input');
 
-console.log(inputs);
 
-inputs.forEach(input => {
-  console.log(input);
-});
