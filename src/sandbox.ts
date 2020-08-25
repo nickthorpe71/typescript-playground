@@ -65,3 +65,41 @@ function lesson9() {
     console.log(`${user.name} says hello`);
   }
 }
+
+/*---- Lesson 10 Function Signatures ----*/
+
+const funcSigs = () => {
+  let greet: Function; // holds any type of function
+
+  // ex 1
+  // define the parameters and return type of a function before using it
+  let greet2: (a: string, b: string) => void;
+
+  // then use the function using the signature
+  // name and greeting have to be string and must return void
+  greet2 = (name: string, greeting: string) => {
+    console.log(`${name} says: ${greeting}`);
+  }
+
+
+  // ex 2
+  let calc: (a: number, b: number, c: string) => number;
+
+  calc = (numOne: number, numTwo: number, action: string) => {
+    if (action === 'add')
+      return numOne + numTwo;
+    else
+      return numOne - numTwo;
+  }
+
+  // ex 3
+  let logDetails: (someObj: { name: string, age: number }) => void;
+
+  type person = { name: string, age: number };
+
+  logDetails = (ninja: person) => {
+    console.log(`${ninja.name} is ${ninja.age} years old.`);
+  }
+
+}
+
